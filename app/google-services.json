@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "871610698704",
+    "project_id": "kayfe-co",
+    "storage_bucket": "kayfe-co.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871610698704:android:d9342e95e4fe987c9687d5",
+        "android_client_info": {
+          "package_name": "com.company.kayfeco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwXj42SyhrhaXSSUnI1pLAzFrNdKcGK-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
