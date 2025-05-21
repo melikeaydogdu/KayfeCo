@@ -38,6 +38,8 @@ fun CartScreen(navController: NavController) {
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(
                     onClick = { navController.navigate("paymentscreen") },
+
+                    colors = ButtonDefaults.buttonColors(containerColor = brown),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text("Ödeme Yap")

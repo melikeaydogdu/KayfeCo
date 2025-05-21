@@ -7,6 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -14,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 
+val brown = Color(0xFF5D4037)
 @Composable
 
 fun SettingsScreen(navController: NavController) {
@@ -79,10 +81,24 @@ fun SettingsScreen(navController: NavController) {
                         Toast.makeText(context, "Eski şifre yanlış!", Toast.LENGTH_SHORT).show()
                     }
             },
+
+            colors = ButtonDefaults.buttonColors(containerColor = brown),
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Şifreyi Güncelle")
         }
     }
+    Divider(thickness = 1.dp)
+    Spacer(modifier = Modifier.height(16.dp))
+
+    Button(
+        onClick = { navController.navigate("orders") },
+
+        colors = ButtonDefaults.buttonColors(containerColor = brown),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text("Geçmiş Siparişlerim")
+    }
+
 }
 

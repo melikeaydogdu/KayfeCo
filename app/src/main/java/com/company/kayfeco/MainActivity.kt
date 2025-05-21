@@ -155,6 +155,10 @@ class MainActivity : ComponentActivity() {
                         composable  ("paymentscreen" ){
                         PaymentScreen(navController)
                         }
+                        composable("orders") {
+                            OrdersScreen(navController)
+                        }
+
                     }
                 }
             }

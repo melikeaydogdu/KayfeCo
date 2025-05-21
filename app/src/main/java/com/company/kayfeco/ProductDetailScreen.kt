@@ -19,9 +19,11 @@ import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.company.kayfeco.CartManager
 import com.company.kayfeco.R
+import com.company.kayfeco.brown
 import com.company.kayfeco.data.ProductWithCategoryId
 
 @Composable
+
 fun ProductDetailScreen(
     product: ProductWithCategoryId,
     onBack: () -> Unit,
@@ -144,6 +146,8 @@ fun ProductDetailScreen(
                     CartManager.addToCart(product, selectedSize)
                     Toast.makeText(context, "Ürün sepete eklendi!", Toast.LENGTH_SHORT).show()
             },
+
+            colors = ButtonDefaults.buttonColors(containerColor = brown),
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Sepete Ekle")
