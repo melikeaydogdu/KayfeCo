@@ -17,7 +17,6 @@ import kotlinx.coroutines.tasks.await
 
 val brown = Color(0xFF5D4037)
 @Composable
-
 fun SettingsScreen(navController: NavController) {
     val context = LocalContext.current
     val auth = FirebaseAuth.getInstance()
@@ -61,7 +60,6 @@ fun SettingsScreen(navController: NavController) {
                     return@Button
                 }
 
-                // Yeniden kimlik doğrulama işlemi
                 val credential = com.google.firebase.auth.EmailAuthProvider
                     .getCredential(email, oldPassword)
 
@@ -81,24 +79,21 @@ fun SettingsScreen(navController: NavController) {
                         Toast.makeText(context, "Eski şifre yanlış!", Toast.LENGTH_SHORT).show()
                     }
             },
-
             colors = ButtonDefaults.buttonColors(containerColor = brown),
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Şifreyi Güncelle")
         }
+
+        Divider(thickness = 1.dp)
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Button(
+            onClick = { navController.navigate("orders") },
+            colors = ButtonDefaults.buttonColors(containerColor = brown),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Geçmiş Siparişlerim")
+        }
     }
-    Divider(thickness = 1.dp)
-    Spacer(modifier = Modifier.height(16.dp))
-
-    Button(
-        onClick = { navController.navigate("orders") },
-
-        colors = ButtonDefaults.buttonColors(containerColor = brown),
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text("Geçmiş Siparişlerim")
-    }
-
 }
-

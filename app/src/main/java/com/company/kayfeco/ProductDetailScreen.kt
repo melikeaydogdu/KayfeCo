@@ -38,7 +38,7 @@ fun ProductDetailScreen(
     }
     val totalPrice = product.price + sizePriceModifier
 
-    // GÖRSEL seçim bloğu
+    // seçim bloğu
     val painter = if (product.imageUrl.isNotBlank()) {
         rememberAsyncImagePainter(product.imageUrl)
     } else {

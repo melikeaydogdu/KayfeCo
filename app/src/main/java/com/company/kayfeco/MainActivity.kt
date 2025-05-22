@@ -182,7 +182,7 @@ fun BottomBar(navController: NavHostController) {
                     modifier = Modifier.size(45.dp) // ICON BOYUTU KÜÇÜLDÜ
                 )
             },
-            label = null, // Label yok
+            label = null,
             alwaysShowLabel = false
         )
         NavigationBarItem(
